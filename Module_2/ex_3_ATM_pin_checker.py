@@ -1,4 +1,4 @@
-# This program checks if a user enters his ATM pin correctly
+# This program checks if a user enters his ATM pin-code correctly
 tries = 3
 
 while True:

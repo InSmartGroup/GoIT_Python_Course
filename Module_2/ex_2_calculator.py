@@ -4,6 +4,7 @@ result = []
 
 counter = 0
 
+# The following 3 variables were required by the exercise conditions
 operand = None
 operator = None
 wait_for_number = None
