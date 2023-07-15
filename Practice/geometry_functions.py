@@ -1,5 +1,6 @@
 def line_segment_length(point_1: int or float, point_2: int or float):
-    """ Given two points, calculates the length of a line segment.
+    """
+    Given two points, calculates the length of a line segment.
 
     :param point_1: Point 1 of the line segment
     :param point_2: Point 2 of the line segment
@@ -15,7 +16,8 @@ def line_segment_length(point_1: int or float, point_2: int or float):
 
 
 def line_slope(x1: int or float, y1: int or float, x2: int or float, y2: int or float):
-    """ Given coordinates of two points (on 'x' and 'y' axes),
+    """
+    Given coordinates of two points (on 'x' and 'y' axes),
     the function calculates the slope of the line between those points.
 
     :param x1: Point 1 coordinate on the 'x' axis
@@ -36,7 +38,8 @@ def line_slope(x1: int or float, y1: int or float, x2: int or float, y2: int or 
 
 
 def line_midpoint(x1: int or float, y1: int or float, x2: int or float, y2: int or float):
-    """ Given coordinates of two points (on 'x' and 'y' axes),
+    """
+    Given coordinates of two points (on 'x' and 'y' axes),
     the function calculates the middle point of the line between those points.
 
     :param x1: Point 1 coordinate on the 'x' axis
