@@ -1,0 +1,11 @@
+WORDS = ['apple', 'milk', 'elephant', 'snow', 'mountain',
+         'chair', 'football', 'state', 'attitude', 'brother',
+         'wheel', 'mother', 'sister', 'familiar', 'monster',
+         'rock', 'shirt', 'pool', 'book', 'drums',
+         'keyboard', 'python', 'developer', 'sofa', 'laptop',
+         'glass', 'grass', 'cellphone', 'connection', 'network',
+         'revenue', 'company', 'business', 'finance', 'return',
+         'salary', 'sailor', 'salesman', 'destiny', 'pizzeria',
+         'sausage', 'ancestors', 'rugby', 'ticket', 'phobia',
+         'airplane', 'spider', 'lizard', 'mammoth', 'eagle',
+         'rocket', 'zombie', 'anime', 'boxing', 'sniper']

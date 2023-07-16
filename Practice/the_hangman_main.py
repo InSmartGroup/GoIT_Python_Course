@@ -1,25 +1,27 @@
 import random
+import the_hangman_words as h_words
 
-WORDS = ['apple', 'milk', 'elephant', 'snow', 'mountain', 'chair', 'football', 'state', 'attitude']
 
-random_word = random.choice(WORDS)
+random_word = random.choice(h_words.WORDS)
 
 word_list = [i for i in random_word]
 
 word_coded_list = ["-" for i in word_list]
 
-guess_attempts = 4
+guess_attempts = 5
+
+guesses_made = []
 
 while True:
-    print("".join(word_coded_list))
+    print("\n" + "".join(word_coded_list))
     print(f"Guess attempts left: {guess_attempts}")
 
-    user_choice = input("Guess a letter: ")
+    user_choice = input("Guess a letter: ").lower()
 
     # process the user's input
     if len(user_choice) > 1:
         print("\nYou must enter only one letter.")
-        continue
+
     elif user_choice.isdigit():
         print("\nIt's a number. Please enter a letter")
 
@@ -28,9 +30,13 @@ while True:
         if letter == user_choice:
             word_coded_list[index] = user_choice
 
-    if user_choice not in word_list:
+    if user_choice not in word_list and user_choice not in guesses_made:
+        guesses_made.append(user_choice)
         print(f"\nThere's no letter \"{user_choice}\" in this word. Try again.")
         guess_attempts -= 1
+
+    elif user_choice not in word_list and user_choice in guesses_made:
+        print(f"\nYou already made a guess for letter \"{user_choice}\". Try another letter.")
         continue
 
     # game end conditions
@@ -39,5 +45,5 @@ while True:
         break
 
     elif word_coded_list == word_list:
-        print("\nYou guessed the word! Good job!")
+        print(f"\nYou guessed the word \"{''.join(word_list)}\"! Good job!")
         break
