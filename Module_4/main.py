@@ -1,3 +1,6 @@
+import sys
+import os
+
 # # lists
 # print(dir(list))
 """
@@ -165,7 +168,6 @@ Tuple methods: count, index
 #
 #
 #
-import pathlib
-#
-path = pathlib.Path()
-print(path)
+# print(sys.platform)
+# print(os.getcwd())
+# exec(open('../Module_1/ex_7_average_sum.py').read())
