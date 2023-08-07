@@ -80,3 +80,76 @@ import re
 # print(find_numbers(message))
 
 # regular expressions
+# phone_number_1 = '415-555-4242'
+# phone_number_2 = '415 555 4242'
+# phone_number_3 = '415-55-54242'
+# phone_number_4 = '111-222-3344'
+
+
+# def find_phone_number_simple(data):
+#     return re.findall(r'\d\d\d-\d\d\d-\d\d\d\d', data)
+#
+#
+# print(find_phone_number_simple(phone_number_1))
+# print(find_phone_number_simple(phone_number_4))
+
+
+# def find_phone_number_simple_2(data):
+#     phone_number = re.compile(r'\d{3}-\d{3}-\d{4}')
+#     return phone_number.findall(data)
+#
+#
+# print(find_phone_number_simple_2(phone_number_1))
+# print(find_phone_number_simple_2(phone_number_4))
+
+message = "Hey there! Please call me at 444-555-7171 by the end of the day." \
+          "Otherwise, you can contact me at 126-774-8754 when I'll get back home."
+
+
+# def find_phone_number_match_group(data):
+#     regex_object = re.compile(r"\d{3}-\d{3}-\d{4}")
+#     found_number = regex_object.search(data)
+#     return found_number.group()
+#
+#
+# print(find_phone_number_match_group(message))
+
+
+# def find_phone_numbers(data):
+#     pattern = r"\d{3}-\d{3}-\d{4}"
+#     found_numbers = re.search(pattern, data)
+#     return found_numbers.group()
+#
+#
+# print(find_phone_numbers(message))  # this code finds only one number
+
+
+# def find_phone_numbers(data):
+#     pattern = r"\d{3}-\d{3}-\d{4}"
+#     found_numbers = re.findall(pattern, data)
+#     return found_numbers
+#
+#
+# print(find_phone_numbers(message))  # this code finds all the numbers that match the pattern
+
+
+# def find_phone_numbers(data):
+#     pattern = r"(\d{3})-(\d{3}-\d{4})"
+#     found_numbers = re.search(pattern, data)
+#     print(f"Found groups: {found_numbers.groups()}")
+#     print(f"Area code: {found_numbers.group(1)}")
+#     print(f"The number itself: {found_numbers.group(2)}")
+#     print(f"The whole phone number: {found_numbers.group(0)}")
+#
+#
+# find_phone_numbers(message)
+
+
+# def find_phone_numbers(data):
+#     pattern = re.compile(r"(\d{3})-(\d{3}-\d{4})")
+#     found_phone_numbers = pattern.findall(data)
+#     for i in found_phone_numbers:
+#         print(f"Area code: {i[0]}, number: {i[1]}")
+#
+#
+# find_phone_numbers(message)
