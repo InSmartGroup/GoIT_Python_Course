@@ -102,8 +102,8 @@ import re
 # print(find_phone_number_simple_2(phone_number_1))
 # print(find_phone_number_simple_2(phone_number_4))
 
-message = "Hey there! Please call me at 444-555-7171 by the end of the day." \
-          "Otherwise, you can contact me at 126-774-8754 when I'll get back home."
+# message = "Hey there! Please call me at 444-555-7171 by the end of the day." \
+#           "Otherwise, you can contact me at 126-774-8754 when I'll get back home."
 
 
 # def find_phone_number_match_group(data):
@@ -153,3 +153,65 @@ message = "Hey there! Please call me at 444-555-7171 by the end of the day." \
 #
 #
 # find_phone_numbers(message)
+
+# message = "Hey there! Please call me at 444-555-7171 by the end of the day." \
+#           "Otherwise, you can contact me at (126) 774-8754 when I'll get back home."
+
+
+# def find_phone_numbers(data):
+#     pattern = re.compile(r"[(0-9) -]+")
+#     found_numbers = pattern.findall(data)
+#     phone_numbers = []
+#     for i in found_numbers:
+#         if i != " ":
+#             i = i.strip().replace("-", "").replace("(", "").replace(")", "").replace(" ", "")
+#
+#             phone_numbers.append(i)
+#
+#     return phone_numbers
+#
+#
+# print(find_phone_numbers(message))
+
+# text = "Niels Bohr was BORN to Christian Bohr (1858-1911), a professor of physiology at the University of Copenhagen," \
+#        "twice a candidate for the Nobel Prize in physiology and medicine,[10] and Ellen Adler (" \
+#        "1860-1930), daughter of the influential and very wealthy Jewish banker and liberal parliamentarian David " \
+#        "Baruch Adler (1826—1878) and Jenny Raphael (1830-1902) of the British Jewish " \
+#        "Raphael Raphael & sons[en][11] of the British Jewish banking dynasty. Bohr's parents married in 1881."
+
+# pattern_1 = re.compile(r"d......r")
+# print(pattern_1.findall(text))
+
+# pattern_2 = r"([d]\w+)"
+# print(re.findall(pattern_2, text))
+
+# pattern_3 = r"profes*"  # zero or more occurrences
+# print(re.findall(pattern_3, text))
+
+# text_1 = 'Adventures of Batman'
+# text_2 = 'Adventures of Batwoman'
+# text_3 = 'Adventures of Batman and Batwoman'
+#
+# pattern = r"bat(wo)?man"
+# found_1 = re.search(pattern, text_1, flags=re.IGNORECASE)
+# found_2 = re.search(pattern, text_2, flags=re.IGNORECASE)
+# found_3 = re.search(pattern, text_3, flags=re.IGNORECASE)
+# print(found_1.group())
+# print(found_2.group())
+# print(found_3.group())
+
+# text = 'Adventures of Batman and Batwoman'
+# regex = re.compile(r"bat\w+", flags=re.I)
+# print(regex.sub("Batwoman", text))
+
+# text = "Niels Bohr was BORN to Christian Bohr (1858-1911), a professor of physiology at the University of Copenhagen," \
+#        "twice a candidate for the Nobel Prize in physiology and medicine,[10] and Ellen Adler (" \
+#        "1860-1930), daughter of the influential and very wealthy Jewish banker and liberal parliamentarian David " \
+#        "Baruch Adler (1826—1878) and Jenny Raphael (1830-1902) of the British Jewish " \
+#        "Raphael Raphael & sons[en][11] of the British Jewish banking dynasty. Bohr's parents married in 1881."
+#
+# regex_1 = re.compile(r"[0-9]{4}-[0-9]{4}")
+# regex_2 = re.compile(r"N\w+\sB\w+")
+# new_text_1 = regex_1.sub('1986-2023', text)
+# new_text_2 = regex_2.sub('Gregory Ostapenko', new_text_1)
+# print(new_text_2)

@@ -3,7 +3,7 @@
 Функція повинна просканувати директорію path та повернути кортеж із двох списків.
 Перший — це список файлів усередині директорії, другий — список директорій.
 """
-from pathlib import Path
+from pathlib_practice import Path
 
 
 def parse_folder(path):
