@@ -1,14 +1,17 @@
 import sys
 from pathlib import Path
 import shutil
-import files_generator, transliteration
+import functions as fn
 
-path = Path.cwd()/'various_files'
-print(path)
+# create a new folder and define the path to it
+path = fn.select_folder('various_stuff')
 
-# this function was used to automatically create multiple files, please ignore this piece of code
-# path = r"C:\Users\gostapenko\PycharmProjects\GoIT_Python_Course\Homeworks\homework_1\various_files"
-# files_generator.create_empty_files(path, name_prefix='', name_suffix="_old")
+# create multiple files and put them into a specified folder
+# fn.create_empty_files(path, name_prefix='новый_', name_suffix='')
 
-if __name__ == "__main__":
-    pass
+for i in path.iterdir():
+    filename = i.stem
+    new_filename = fn.transliterate(filename)
+    file = open(path/new_filename, 'w')
+    file.close()
+
