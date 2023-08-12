@@ -1,7 +1,7 @@
 from pathlib import Path
 import shutil
 
-path = Path("C:\\Users\\gostapenko\\PycharmProjects\\GoIT_Python_Course\\Homeworks\\homework_1")
+path = Path("/Homeworks/homework_1_2")
 # for i in path.iterdir():
 #     if i.is_file():
 #         print(f"Drive: {i.drive}")
