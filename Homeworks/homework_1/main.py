@@ -21,17 +21,8 @@ TRANSLIT = {1072: 'a', 1040: 'A', 1073: 'b', 1041: 'B', 1074: 'v', 1042: 'V', 10
             1111: 'ji', 1031: 'JI', 1169: 'g', 1168: 'G'}
 
 
-def clean_folders(path):  # function that cleans folders
-    path = Path(path)
-    for folder in path.iterdir():
-        if folder.name not in sort_folders:
-            if folder.is_dir():
-                clean_folders(folder)
-                if not any(folder.iterdir()):
-                    folder.rmdir()
-
-
-def normalize(path):  # the function that transliterates file names
+# the function that transliterates file names
+def normalize(path):
     path = Path(path)
     for file_folder in path.iterdir():
         if file_folder.name == 'unknown type':
@@ -52,13 +43,26 @@ def normalize(path):  # the function that transliterates file names
             file_folder.rename(new_path)
 
 
-def create_folders(path, folder_list=sort_folders):  # creates folders for further sorting
+# function that cleans folders
+def clean_folders(path):
+    path = Path(path)
+    for folder in path.iterdir():
+        if folder.name not in sort_folders:
+            if folder.is_dir():
+                clean_folders(folder)
+                if not any(folder.iterdir()):
+                    folder.rmdir()
+
+
+# creates folders for further sorting
+def create_folders(path, folder_list=sort_folders):
     for folder in folder_list:
         folder_path = Path(path) / folder
         folder_path.mkdir(exist_ok=True)
 
 
-def unpack_archives(file_name, path):  # unpacks archives into folders
+# unpacks archives into folders
+def unpack_archives(file_name, path):
     path_to_unpack = f'{path}/archives/'
     folder_path = Path(path_to_unpack) / Path(file_name).name.replace(Path(file_name).suffix, '')
     folder_path.mkdir(exist_ok=True)
@@ -71,9 +75,10 @@ def unpack_archives(file_name, path):  # unpacks archives into folders
         shutil.unpack_archive(file_name, folder_path, format='gz')
 
 
-def sort_files(file_name):  # puts files into specific folderss
+# puts files into specific folders
+def sort_files(file_name):
     if file_name.suffix in document_extensions:
-        target_folder = f'{my_path}/documents/'
+        target_folder = f'{the_path}/documents/'
 
         try:
             shutil.move(str(file_name), target_folder)
@@ -81,7 +86,7 @@ def sort_files(file_name):  # puts files into specific folderss
             print(f'Error while moving the file. Check the \'{file_name.name}\' file.')
 
     elif file_name.suffix in image_extensions:  # if the file has image format
-        target_folder = f'{my_path}/images/'
+        target_folder = f'{the_path}/images/'
 
         try:
             shutil.move(str(file_name), target_folder)
@@ -89,7 +94,7 @@ def sort_files(file_name):  # puts files into specific folderss
             print(f'Error while moving the file. Check the \'{file_name.name}\' file.')
 
     elif file_name.suffix in video_extensions:  # if the file has video format
-        target_folder = f'{my_path}/video/'
+        target_folder = f'{the_path}/video/'
 
         try:
             shutil.move(str(file_name), target_folder)
@@ -97,7 +102,7 @@ def sort_files(file_name):  # puts files into specific folderss
             print(f'Error while moving the file. Check the \'{file_name.name}\' file.')
 
     elif file_name.suffix in audio_extensions:  # if the file has ausio format
-        target_folder = f'{my_path}/audio/'
+        target_folder = f'{the_path}/audio/'
 
         try:
             shutil.move(str(file_name), target_folder)
@@ -105,9 +110,9 @@ def sort_files(file_name):  # puts files into specific folderss
             print(f'Error while moving the file. Check the \'{file_name.name}\' file.')
 
     elif file_name.suffix in archive_extensions:
-        unpack_archives(file_name, my_path)
+        unpack_archives(file_name, the_path)
     else:
-        target_folder = f'{my_path}/unknown type/'
+        target_folder = f'{the_path}/unknown type/'
         shutil.move(str(file_name), target_folder)
 
 
@@ -124,18 +129,19 @@ def parse(path):
         print(items.name)
 
 
-my_path = sys.argv[1]
+the_path = sys.argv[1]
 
 
-def main():  # the main function
+# the main loop
+def main():
     if len(sys.argv) < 2:
-        print("Please define the name of a script and the path to a folder you need to process")
+        print("Please define the name of a script file and the path to a folder you need to process")
         sys.exit(1)
 
-    create_folders(my_path)
-    parse(my_path)
-    normalize(my_path)
-    clean_folders(my_path)
+    create_folders(the_path)
+    parse(the_path)
+    normalize(the_path)
+    clean_folders(the_path)
 
 
 if __name__ == '__main__':
