@@ -26,3 +26,31 @@
 #
 #     something_bytearray = bytearray(something)
 #     print(list(something_bytearray))
+
+# latin_lower = 'abcdefghijklmnopqrstuvwxyz'
+# latin_upper = latin_lower.upper()
+# letters = dict()
+# for i in latin_lower:
+#     letter = i.encode('utf-16')
+#     letters[i] = list(letter)
+#
+# for i in latin_upper:
+#     letter = i.encode('utf-16')
+#     letters[i] = list(letter)
+#
+# print(letters['A'])
+# print(letters['r'])
+# print(letters['U'])
+
+# latin_lower = 'abcdefghijklmnopqrstuvwxyz'
+# latin_upper = latin_lower.upper()
+# ascii_lower = []
+# ascii_upper = []
+#
+# for i in latin_lower:
+#     ascii_lower.append(ord(i))
+#     ascii_upper.append(ord(i.upper()))
+#
+# print(ascii_lower)
+# print(ascii_upper)
+
