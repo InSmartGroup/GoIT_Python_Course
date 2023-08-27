@@ -6,7 +6,7 @@ setup(
     description='The script that cleans a specified folder',
     author='Gregory Ostapenko',
     author_email='goalliance@gmail.com',
-    url='',
+    url='https://github.com/InSmartGroup/GoIT_Python_Course/tree/master/Homeworks/homework_2',
     license='MIT',
     classifiers=[
         "Programming Language :: Python :: 3",
