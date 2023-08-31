@@ -4,6 +4,7 @@ from time import sleep, time
 import timeit
 import math
 import collections
+import calendar
 
 # # date and time manipulation
 # current_date = datetime.now()
@@ -53,3 +54,11 @@ import collections
 # print('world')
 # print('my name is Greg')
 # print(time() - start)
+
+# days = calendar.monthrange(2012, 2)[1]
+# date = datetime(year=2012, month=2, day=days)
+# print(date.day)
+
+# date = datetime.now()
+# print(date.strftime("%A %d %b %Y"))
+
