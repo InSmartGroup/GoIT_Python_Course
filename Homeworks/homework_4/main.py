@@ -224,6 +224,8 @@ def main():
             get_help()
         elif user_input == 'delete all':
             file_content = delete_all_contacts(file_content)
+        elif user_input == 'hello':
+            print("Hello to you too! How can I help you?\n")
 
         write_to_file(PATH, file_content)
 
