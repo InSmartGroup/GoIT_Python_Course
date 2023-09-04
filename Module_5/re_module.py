@@ -37,21 +37,21 @@ import re
 # phone_number_4 = '111-222-3344'
 #
 #
-# def is_phone_number(data):
-#     if len(data) != 12:
+# def is_phone_number(data.txt):
+#     if len(data.txt) != 12:
 #         return False
 #     for i in range(3):
-#         if not data[i].isdecimal():
+#         if not data.txt[i].isdecimal():
 #             return False
-#     if data[3] != "-":
+#     if data.txt[3] != "-":
 #         return False
 #     for i in range(4, 7):
-#         if not data[i].isdecimal():
+#         if not data.txt[i].isdecimal():
 #             return False
-#     if data[7] != "-":
+#     if data.txt[7] != "-":
 #         return False
 #     for i in range(8, 12):
-#         if not data[i].isdecimal():
+#         if not data.txt[i].isdecimal():
 #             return False
 #     else:
 #         return True
@@ -86,17 +86,17 @@ import re
 # phone_number_4 = '111-222-3344'
 
 
-# def find_phone_number_simple(data):
-#     return re.findall(r'\d\d\d-\d\d\d-\d\d\d\d', data)
+# def find_phone_number_simple(data.txt):
+#     return re.findall(r'\d\d\d-\d\d\d-\d\d\d\d', data.txt)
 #
 #
 # print(find_phone_number_simple(phone_number_1))
 # print(find_phone_number_simple(phone_number_4))
 
 
-# def find_phone_number_simple_2(data):
+# def find_phone_number_simple_2(data.txt):
 #     phone_number = re.compile(r'\d{3}-\d{3}-\d{4}')
-#     return phone_number.findall(data)
+#     return phone_number.findall(data.txt)
 #
 #
 # print(find_phone_number_simple_2(phone_number_1))
@@ -106,36 +106,36 @@ import re
 #           "Otherwise, you can contact me at 126-774-8754 when I'll get back home."
 
 
-# def find_phone_number_match_group(data):
+# def find_phone_number_match_group(data.txt):
 #     regex_object = re.compile(r"\d{3}-\d{3}-\d{4}")
-#     found_number = regex_object.search(data)
+#     found_number = regex_object.search(data.txt)
 #     return found_number.group()
 #
 #
 # print(find_phone_number_match_group(message))
 
 
-# def find_phone_numbers(data):
+# def find_phone_numbers(data.txt):
 #     pattern = r"\d{3}-\d{3}-\d{4}"
-#     found_numbers = re.search(pattern, data)
+#     found_numbers = re.search(pattern, data.txt)
 #     return found_numbers.group()
 #
 #
 # print(find_phone_numbers(message))  # this code finds only one number
 
 
-# def find_phone_numbers(data):
+# def find_phone_numbers(data.txt):
 #     pattern = r"\d{3}-\d{3}-\d{4}"
-#     found_numbers = re.findall(pattern, data)
+#     found_numbers = re.findall(pattern, data.txt)
 #     return found_numbers
 #
 #
 # print(find_phone_numbers(message))  # this code finds all the numbers that match the pattern
 
 
-# def find_phone_numbers(data):
+# def find_phone_numbers(data.txt):
 #     pattern = r"(\d{3})-(\d{3}-\d{4})"
-#     found_numbers = re.search(pattern, data)
+#     found_numbers = re.search(pattern, data.txt)
 #     print(f"Found groups: {found_numbers.groups()}")
 #     print(f"Area code: {found_numbers.group(1)}")
 #     print(f"The number itself: {found_numbers.group(2)}")
@@ -145,9 +145,9 @@ import re
 # find_phone_numbers(message)
 
 
-# def find_phone_numbers(data):
+# def find_phone_numbers(data.txt):
 #     pattern = re.compile(r"(\d{3})-(\d{3}-\d{4})")
-#     found_phone_numbers = pattern.findall(data)
+#     found_phone_numbers = pattern.findall(data.txt)
 #     for i in found_phone_numbers:
 #         print(f"Area code: {i[0]}, number: {i[1]}")
 #
@@ -158,9 +158,9 @@ import re
 #           "Otherwise, you can contact me at (126) 774-8754 when I'll get back home."
 
 
-# def find_phone_numbers(data):
+# def find_phone_numbers(data.txt):
 #     pattern = re.compile(r"[(0-9) -]+")
-#     found_numbers = pattern.findall(data)
+#     found_numbers = pattern.findall(data.txt)
 #     phone_numbers = []
 #     for i in found_numbers:
 #         if i != " ":

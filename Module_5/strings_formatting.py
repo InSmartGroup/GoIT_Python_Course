@@ -12,8 +12,8 @@ import re
 # foods = {'name': 'foods', "apples": 6, "pears": 6, "tomatoes": 2, "sausages": 4, "bread": 2, "wine": 3, "beer": 400}
 #
 #
-# def table(data: dict, right=0, left=0):
-#     for k, v in data.items():
+# def table(data.txt: dict, right=0, left=0):
+#     for k, v in data.txt.items():
 #         if v == 'foods':
 #             print(f"{v.title().center(right + left, '_')}")
 #         else:

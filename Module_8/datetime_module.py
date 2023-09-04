@@ -1,5 +1,5 @@
-import datetime
 from datetime import datetime as dt
+import time
 
 date_now = dt.now()
 # print(date_now.date())
@@ -20,6 +20,11 @@ date_now = dt.now()
 # print(dt.strptime('1986 November, Saturday 15th, 23:17:41', '%Y %B, %A %dth, %H:%M:%S'))  # from string to datetime
 # print(date_ts.timestamp())  # datetime object to timestamp
 # print(dt.fromtimestamp(532473461.0))  # from timestamp to datetime object
+
+# start = time.time()
+# my_list = [i for i in range(100000000)]  # it takes 8.205958604812622 seconds to perform this operation
+# end = time.time()
+# print(end-start)  # calculate the duration of an operation
 
 date_bd = dt(year=2013, month=5, day=24, hour=19, minute=30)
 print(date_bd.strftime("My daughter was born in %Y, %b %dth at %H:%M. It was %A."))

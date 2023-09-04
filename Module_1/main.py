@@ -22,7 +22,7 @@
 # print(type(age))
 # print(type(int(age)))
 
-# Checking the data type
+# Checking the data.txt type
 # print(type("Gregory"))
 # print(type(123))
 # print(type(str(123)))
@@ -82,13 +82,13 @@
 # print(int(y) + int(y))
 
 # Input / output
-# data = input("Type something: ")
-# print(data, type(data))  # input() always returns a string datatype
-# print(data + data)
+# data.txt = input("Type something: ")
+# print(data.txt, type(data.txt))  # input() always returns a string datatype
+# print(data.txt + data.txt)
 
-# data = int(input("Enter a number: "))
-# print(data, type(data))  # converted to an integer datatype
-# print(data + data)
+# data.txt = int(input("Enter a number: "))
+# print(data.txt, type(data.txt))  # converted to an integer datatype
+# print(data.txt + data.txt)
 
 # Docstrings
 # print("""This is a docstring.
