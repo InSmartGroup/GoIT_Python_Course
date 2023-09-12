@@ -1,3 +1,12 @@
+"""
+SOLID:
+S - Single Responsibility principle
+O - Open-Closed principle
+L - Liskov substitution principle
+I - Interface segregation principle
+D - Dependency Inversion principle
+"""
+
 # def func(arg):
 #     return f"{arg}"
 #
@@ -29,4 +38,3 @@
 #
 # # another way to use enclosed functions
 # print(multiply(10)(5)(3))
-

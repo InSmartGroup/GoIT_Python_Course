@@ -204,6 +204,9 @@ def get_help():
 
 
 def main():
+    print("Greetings! I'm CLI - your virtual assistant!")
+    print("Please enter your command. Or type 'help' to get the list of commands.")
+
     while True:
         file_content = check_file_status_and_read(PATH)
 
@@ -231,7 +234,4 @@ def main():
 
 
 if __name__ == "__main__":
-    print("Greetings! I'm CLI - your virtual assistant!")
-    print("Please enter your command. Or type 'help' to get the list of commands.")
-
     main()
