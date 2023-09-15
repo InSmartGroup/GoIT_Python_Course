@@ -17,7 +17,7 @@
 #     result_list.append(element)
 #
 # print(result_list)
-#
+
 # # mapping using functions
 # my_list = [1, 2, 3, 4, 5]
 # result_list = []
@@ -32,7 +32,7 @@
 #     result_list.append(element)
 #
 # print(result_list)
-#
+
 # # mapping using lambda functions
 # my_list = [1, 2, 3, 4, 5]
 # result_list = []
@@ -46,3 +46,11 @@
 # my_map = map(operation, my_list)
 # result = list(my_map)
 
+# mapping multiple collections
+# list_1 = [1, 2, 3, 4, 5]
+# list_2 = ['a', 'b', 'c', 'd', 'e']
+# list_3 = ['q', 'w', 'y', 'r', 't']
+#
+# result = map(lambda a, b, c: list[a, b, c], list_2, list_1, list_3)
+# for i in result:
+#     print(i)
