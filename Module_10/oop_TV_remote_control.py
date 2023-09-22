@@ -67,6 +67,8 @@ class Remote:
 
 
 remote = Remote(brand_name='Samsung', model_name='TGS 2500')
+remote_2 = Remote(brand_name='Sony', model_name='4kLS')
+
 remote.turn_on()
 remote.show_info()
 remote.volume_up(7)
@@ -86,3 +88,9 @@ for i in range(50):
     remote.volume_up(i)
     remote.show_info()
     remote.switch_channel(i)
+
+remote_2.turn_on()
+remote_2.show_info()
+remote_2.turn_off()
+remote_2.turn_on()
+remote_2.show_info()
