@@ -15,7 +15,7 @@ class Remote:
 
     def check_battery_status(self):
         if self.is_turned_on:
-            if self.battery < 0:
+            if self.battery < 1:
                 self.battery = 0
                 self.is_turned_on = False
                 print("Low batteries. Please replace.")
@@ -82,7 +82,7 @@ remote.switch_channel(-10)
 remote.switch_channel(7)
 remote.show_info()
 
-for i in range(100):
+for i in range(50):
     remote.volume_up(i)
-
-remote.show_info()
+    remote.show_info()
+    remote.switch_channel(i)
