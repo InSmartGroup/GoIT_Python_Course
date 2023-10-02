@@ -109,3 +109,64 @@
 # print(sword.throw_weapon())
 # print(axe.throw_weapon())
 
+# class Book:
+#     def __init__(self, name: str, number_pages: int):
+#         self.name = name
+#         self.number_pages = number_pages
+#         self.current_page = 0
+#         self.bookmark = None
+#         self.book_is_open = False
+#
+#     def open_book(self):
+#         self.book_is_open = True
+#
+#     def close_book(self):
+#         self.book_is_open = False
+#
+#     def turn_next_page(self):
+#         if self.book_is_open:
+#             self.current_page += 1
+#
+#     def turn_previous_page(self):
+#         if self.book_is_open:
+#             self.current_page -= 1
+#
+#     def bookmark_page(self):
+#         self.bookmark = self.current_page
+#
+#     def report(self):
+#         print(f"{self.name.title()}".center(25, "_"))
+#         print(f"Number of pages: {self.number_pages}")
+#         print(f"Current page: {self.current_page}")
+#         if self.bookmark is not None:
+#             print(f"Bookmarked on page: {self.bookmark}")
+#
+#
+# book = Book("The Witcher", 1412)
+#
+# book.open_book()
+# print(book.book_is_open)
+# print(book.current_page)
+# book.turn_next_page()
+# print(book.current_page)
+# book.turn_next_page()
+# book.turn_next_page()
+# book.turn_next_page()
+# book.turn_next_page()
+# book.turn_next_page()
+# book.turn_next_page()
+# print(book.current_page)
+# book.close_book()
+# print(book.book_is_open)
+# book.open_book()
+# print(book.current_page)
+# book.bookmark_page()
+# book.report()
+# book.turn_next_page()
+# book.turn_next_page()
+# book.turn_next_page()
+# book.turn_next_page()
+# book.turn_next_page()
+# book.report()
+# book.bookmark_page()
+# book.report()
