@@ -13,4 +13,4 @@ for i in path.iterdir():
 
 file_2_rename = path/'test.txt'
 file_2_rename.rename("testing_test.txt")
-shutil.move("testing_test.txt", "../testing_test.txt")  # move the file to a specified folder
+shutil.move("testing_test.txt", "../../testing_test.txt")  # move the file to a specified folder
